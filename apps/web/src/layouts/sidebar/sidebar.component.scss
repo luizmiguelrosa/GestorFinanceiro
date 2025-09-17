@@ -1,0 +1,65 @@
+@import "../../styles.scss";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 250px;
+  background-color: #ffffff; // A dark color
+  color: #ecf0f1; // Light text
+  height: 100vh; // Full height
+  padding: 8px;
+  box-sizing: border-box; // Include padding in the width
+}
+
+.sidebar-module {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 16px;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.25); // Slightly lighter on hover
+  }
+
+  & {
+    cursor: pointer;
+  }
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+nav a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.account-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.account-left-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.account-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-name {
+  font-weight: bold;
+}
