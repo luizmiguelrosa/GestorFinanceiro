@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-section',
+  selector: 'app-main-container',
   imports: [],
   template: `
-  <div>
+  <main>
     <ng-content></ng-content>
-  </div>`,
-  styleUrl: './section.component.scss',
+  </main>`,
+  styleUrl: './main-container.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SectionComponent { }
+export class MainContainerComponent { }

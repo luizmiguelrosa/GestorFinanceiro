@@ -1,0 +1,7 @@
+button span {
+  display: block;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+}

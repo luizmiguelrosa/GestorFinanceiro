@@ -1,15 +1,30 @@
-@import "../../styles.scss";
+@import "../../styles.css";
 
 .sidebar {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 250px;
-  background-color: #ffffff; // A dark color
-  color: #ecf0f1; // Light text
+  background-color: var(--color-sidebar);
   height: 100vh; // Full height
   padding: 8px;
   box-sizing: border-box; // Include padding in the width
+  transition: width 0.2s ease-in-out;
+
+  border-width: 0 1px 0 0;
+  border-color: var(--border);
+
+  &:not(.expanded) {
+    width: fit-content;
+
+    .sidebar-module {
+      justify-content: center;
+    }
+
+    .account-container {
+      justify-content: center;
+    }
+  }
 }
 
 .sidebar-module {
@@ -18,9 +33,11 @@
   padding: 8px;
   gap: 8px;
   border-radius: 16px;
+  text-decoration: none;
+  color: var(--color-sidebar-foreground);
 
   &:hover {
-    background-color: rgba($primary-color, 0.25); // Slightly lighter on hover
+    background-color: rgba(var(--color-primary), 0.25); // Slightly lighter on hover
   }
 
   & {
@@ -32,14 +49,9 @@ nav ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-nav a {
-  display: block;
-  color: #ecf0f1;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .account-container {
@@ -47,6 +59,11 @@ nav a {
   align-items: center;
   justify-content: space-between;
   padding: 8px;
+  transition: all 0.2s ease-in-out;
+
+  lucide-icon {
+    cursor: pointer;
+  }
 }
 
 .account-left-container {
@@ -58,8 +75,9 @@ nav a {
 .account-info-container {
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
 .account-name {
-  font-weight: bold;
+  font-weight: 500;
 }

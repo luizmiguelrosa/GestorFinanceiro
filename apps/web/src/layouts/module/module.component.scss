@@ -1,0 +1,19 @@
+@import "../../styles.css";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+:host h1 {
+  font-size: x-large;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.body-module {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

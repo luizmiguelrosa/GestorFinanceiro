@@ -1,0 +1,20 @@
+function clamp(value: number, [min, max]: [number, number]): number {
+  return Math.min(max, Math.max(min, value));
+}
+
+function roundToStep(value: number, min: number, step: number): number {
+  return Math.round((value - min) / step) * step + min;
+}
+
+function convertValueToPercentage(value: number, min: number, max: number): number {
+  return ((value - min) / (max - min)) * 100;
+}
+
+function convertValueToPrice(value: number): string {
+  return Intl.NumberFormat("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  }).format(value);
+}
+
+export { clamp, roundToStep, convertValueToPercentage, convertValueToPrice };
